@@ -6,11 +6,9 @@ spring:
 spring:
   profiles: development
   
-configuration:
+configuration:  
   projectName: configclient
-  
-server:
-  port:8000
-  
-message:
-  greeting: Hello from the configuration!
+server:  
+  port: 8000
+message:  
+  greeting: Hello from the configuration
