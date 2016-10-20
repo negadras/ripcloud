@@ -1,0 +1,143 @@
+spring:
+  profiles:
+    active: development
+
+---
+spring:
+  profiles: development
+
+server:
+    port: 9000
+
+endpoints:
+  health:
+    path: /app/health
+
+api:
+  content-api:
+    baseUrl: http://localhost:8081/cdp.content-store
+    endpoint:
+      content: ${api.content-api.baseUrl}/content
+  camunda:
+    baseUrl: http://localhost:8080/engine-rest
+    endpoint:
+      brochure-breakdown: ${api.camunda.baseUrl}/process-definition/key/brochurebreakdown/submit-form
+      complete-task: ${api.camunda.baseUrl}/task/{taskId}/complete
+  legacy-connector:
+    baseUrl: http://localhost:8080
+    endpoint:
+      brochure: ${api.legacy-connector.baseUrl}/brochure
+      page-url: ${api.legacy-connector.baseUrl}/brochureId/{legacyBrochureId}/page/{pageNumber}
+  media-store:
+    baseUrl: http://localhost:8082
+    endpoint:
+      upload: ${api.media-store.baseUrl}/media
+  product-search:
+    baseUrl: http://localhost:8099
+    endpoint:
+      productSearch: ${api.product-search.baseUrl}/productSearch/search/{searchKeyWord}
+
+---
+spring:
+  profiles: playground
+
+server:
+    port: 9000
+
+endpoints:
+  health:
+    path: /app/health
+
+api:
+  content-api:
+    baseUrl: http://172.29.50.139:8099/cdp.content-store
+    endpoint:
+      content: ${api.content-api.baseUrl}/content
+  camunda:
+    baseUrl: http://172.29.50.139:8080/engine-rest
+    endpoint:
+      brochure-breakdown: ${api.camunda.baseUrl}/process-definition/key/brochurebreakdown/submit-form
+      complete-task: ${api.camunda.baseUrl}/task/{taskId}/complete
+  legacy-connector:
+    baseUrl: http://localhost:8080
+    endpoint:
+      brochure: ${api.legacy-connector.baseUrl}/brochure
+      page-url: ${api.legacy-connector.baseUrl}/brochureId/{legacyBrochureId}/page/{pageNumber}
+  media-store:
+    baseUrl: http://localhost:8082
+    endpoint:
+      upload: ${api.media-store.baseUrl}/media
+  product-search:
+    baseUrl: http://172.29.51.201:8080
+    endpoint:
+      productSearch: ${api.product-search.baseUrl}/productSearch/search/{searchKeyWord}
+
+---
+spring:
+  profiles: stage
+
+server:
+    port: 9000
+
+endpoints:
+  health:
+    path: /app/health
+
+api:
+  content-api:
+    baseUrl: http://172.29.50.139:8099/cdp.content-store
+    endpoint:
+      content: ${api.content-api.baseUrl}/content
+  camunda:
+    baseUrl: http://172.29.50.139:8080/engine-rest
+    endpoint:
+      brochure-breakdown: ${api.camunda.baseUrl}/process-definition/key/brochurebreakdown/submit-form
+      complete-task: ${api.camunda.baseUrl}/task/{taskId}/complete
+  legacy-connector:
+    baseUrl: http://localhost:8080
+    endpoint:
+      brochure: ${api.legacy-connector.baseUrl}/brochure
+      page-url: ${api.legacy-connector.baseUrl}/brochureId/{legacyBrochureId}/page/{pageNumber}
+  media-store:
+    baseUrl: http://localhost:8082
+    endpoint:
+      upload: ${api.media-store.baseUrl}/media
+  product-search:
+    baseUrl: http://172.29.51.201:8080
+    endpoint:
+      productSearch: ${api.product-search.baseUrl}/productSearch/search/{searchKeyWord}
+
+---
+spring:
+  profiles: production
+
+server:
+    port: 9000
+
+endpoints:
+  health:
+    path: /app/health
+
+api:
+  content-api:
+    baseUrl: http://#######/cdp.content-store
+    endpoint:
+      content: ${api.content-api.baseUrl}/content
+  camunda:
+    baseUrl: http://######/engine-rest
+    endpoint:
+      brochure-breakdown: ${api.camunda.baseUrl}/process-definition/key/brochurebreakdown/submit-form
+      complete-task: ${api.camunda.baseUrl}/task/{taskId}/complete
+  legacy-connector:
+    baseUrl: http://localhost:8080
+    endpoint:
+      brochure: ${api.legacy-connector.baseUrl}/brochure
+      page-url: ${api.legacy-connector.baseUrl}/brochureId/{legacyBrochureId}/page/{pageNumber}
+  media-store:
+    baseUrl: http://localhost:8082
+    endpoint:
+      upload: ${api.media-store.baseUrl}/media
+  product-search:
+    baseUrl: http://######
+    endpoint:
+      productSearch: ${api.product-search.baseUrl}/productSearch/search/{searchKeyWord}
