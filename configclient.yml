@@ -1,5 +1,3 @@
-spring:
-  profiles: development
 configuration:  
   projectName: configclient
 server:  
