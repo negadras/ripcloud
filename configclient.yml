@@ -1,6 +1,6 @@
 spring:
   profiles:
-    active: development
+    active: stage
     
 ---
 spring:
@@ -11,3 +11,13 @@ server:
   port: 8001
 message:  
   greeting: development profile configuration client
+
+---
+spring:
+  profile: stage
+configuration:  
+  projectName: configclient
+server:  
+  port: 8002
+message:  
+  greeting: stage profile configuration client
