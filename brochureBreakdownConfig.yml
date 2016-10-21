@@ -7,10 +7,6 @@ spring:
   profile: playground
 server:  
   port: 9900
-configuration:
-  projectName: brochureBreakdownConfig
-  
-
 
 endpoints:
   health:
@@ -40,12 +36,3 @@ api:
     endpoint:
       productSearch: ${api.product-search.baseUrl}/productSearch/search/{searchKeyWord}
 
----
-spring:
-  profile: development
-configuration:  
-  projectName: configclient
-server:  
-  port: 9999
-message:  
-  greeting: development profile configuration client
