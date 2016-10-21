@@ -5,12 +5,12 @@ spring:
 ---
 spring:
   profile: playground
-
+server:  
+  port: 9900
 configuration:
   projectName: brochureBreakdownConfig
   
-server:  
-  port: 9900
+
 
 endpoints:
   health:
