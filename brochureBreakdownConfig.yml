@@ -1,6 +1,6 @@
 spring:
   profiles:
-    active: playground
+    active: development
 
 ---
 spring:
@@ -46,6 +46,6 @@ spring:
 configuration:  
   projectName: configclient
 server:  
-  port: 8001
+  port: 9999
 message:  
   greeting: development profile configuration client
