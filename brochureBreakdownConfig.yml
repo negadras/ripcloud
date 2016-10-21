@@ -5,7 +5,7 @@ spring:
 ---
 
 spring:
-  profiles: playground
+  profile: playground
 server:  
   port: 9900
 
@@ -40,7 +40,7 @@ api:
 ---
 
 spring:
-  profiles: development
+  profile: development
 server:  
   port: 9999
 message:  
