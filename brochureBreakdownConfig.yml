@@ -9,8 +9,8 @@ spring:
 configuration:
   projectName: brochureBreakdownConfig
   
-server:
-    port: 9000
+server:  
+  port: 9900
 
 endpoints:
   health:
