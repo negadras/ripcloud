@@ -1,6 +1,6 @@
 spring:
   profiles:
-    active: playground
+    active: development
 
 ---
 spring:
@@ -39,3 +39,13 @@ api:
     baseUrl: http://172.29.51.201:8080
     endpoint:
       productSearch: ${api.product-search.baseUrl}/productSearch/search/{searchKeyWord}
+
+---
+spring:
+  profile: development
+configuration:  
+  projectName: configclient
+server:  
+  port: 8001
+message:  
+  greeting: development profile configuration client
