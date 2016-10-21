@@ -41,8 +41,6 @@ api:
 
 spring:
   profile: development
-configuration:  
-  projectName: configclient
 server:  
   port: 9999
 message:  
