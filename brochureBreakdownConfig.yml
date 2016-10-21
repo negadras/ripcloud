@@ -4,7 +4,7 @@ spring:
 
 ---
 spring:
-  profiles: playground
+  profile: playground
 
 configuration:
   projectName: brochureBreakdownConfig
