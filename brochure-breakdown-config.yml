@@ -41,6 +41,9 @@ api:
 spring:
   profiles: playground
 
+configuration:
+  projectName: brochure-breakdown-config
+  
 server:
     port: 9000
 
