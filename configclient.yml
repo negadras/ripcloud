@@ -1,5 +1,7 @@
 configuration:  
   projectName: configclient
+profile:
+  active: development
 server:  
   port: 8001
 message:  
