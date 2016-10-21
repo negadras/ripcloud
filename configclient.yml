@@ -1,7 +1,8 @@
 configuration:  
   projectName: configclient
-profile:
-  active: development
+spring:
+  profile:
+    active: development
 server:  
   port: 8001
 message:  
